@@ -52,7 +52,7 @@ class Song
     song = self.new
     song.artist_name = filename.split(" - ")[0]
     song.name = filename.split(" - ")[1].split(".mp3")[0]
-    self.all << song.name
+    self.all << song
     song
   end
 
