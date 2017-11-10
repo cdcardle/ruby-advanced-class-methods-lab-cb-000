@@ -47,3 +47,5 @@ class Song
     song.name = filename.split(" - ")[1].split(".mp3")[0]
   end
 end
+
+Song.new_from_filename("Blink 182 - Bored To Death.mp3")
