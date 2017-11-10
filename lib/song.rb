@@ -47,6 +47,14 @@ class Song
     song.name = filename.split(" - ")[1].split(".mp3")[0]
     song
   end
-end
 
-Song.new_from_filename("Blink 182 - Bored To Death.mp3")
+  def self.create_from_filename(filename)
+    song = self.new
+    song.artist_name = filename.split(" - ")[0]
+    song.name = filename.split(" - ")[1].split(".mp3")[0]
+    song
+  end
+
+  def self.destroy_all
+    self.all.empty
+end
